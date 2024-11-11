@@ -1,0 +1,112 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #343a40;
+    font-weight: bold;
+}
+
+hr {
+    border-top: 1px solid #ced4da;
+    margin: 15px 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #495057;
+    margin-right: 10px;
+}
+
+.form-control,
+.form-select {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}
+
+input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.p-2 {
+    padding: 10px;
+}
+
+.bg-light {
+    background-color: #e9ecef;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.gap-3 > * {
+    margin-right: 10px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-dark {
+    background-color: #343a40;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+h5 {
+    color: #495057;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+strong {
+    font-weight: bold;
+    color: #495057;
+}

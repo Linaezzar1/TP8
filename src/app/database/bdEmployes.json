@@ -1,0 +1,22 @@
+{
+  "employes": [
+    {
+      "id": "efr6",
+      "matricule": "M589",
+      "nom": "Manel Mhamdi",
+      "affiliation": {
+        "fonction": "Technicien",
+        "departement": "TI"
+      }
+    },
+    {
+      "id": "efd6",
+      "matricule": "M147",
+      "nom": "Ahmed Mansour",
+      "affiliation": {
+        "poste": "PDG",
+        "departement": "Finance"
+      }
+    }
+  ]
+}

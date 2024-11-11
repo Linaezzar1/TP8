@@ -1,0 +1,16 @@
+{
+  "games": [
+    {
+      "id": "1",
+      "name": "Monopoly",
+      "price": 30,
+      "madeIn": "Tunisie",
+      "category": "Jeux de société",
+      "isNew": false,
+      "shops": [
+        "Tunis",
+        "Sousse"
+      ]
+    }
+  ]
+}

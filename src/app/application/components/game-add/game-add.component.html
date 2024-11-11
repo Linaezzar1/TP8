@@ -1,0 +1,70 @@
+<div class="container">
+    <h3>Ajout d'un jeu</h3>
+    <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label> Identifiant du jeu </label>
+            <input class="form-control" type="number" name="id" formControlName="id" readonly>
+        </div>
+        <div>
+            <label>Nom</label>
+            <input class="form-control" type="text"  name="name" formControlName="name" >
+            @if(gameName?.invalid && gameName?.dirty){
+                <div class="alert alert-danger">
+                    Le nom du jeu a un format non valide
+                </div>
+            }
+        </div>
+        <div>
+            <label>Prix</label>
+            <input class="form-control" type="number" name="price" formControlName="price" >
+            @if(isValidValue()){
+                <div class="alert alert-danger">
+                    Le prix doit etre au minimum 0.1DT et obligatoire
+                </div>
+            }
+        </div>
+
+        <div>
+            <label> Made In </label>
+            <label>
+                <input class="form-check-input" type="radio" name="madeIn" value="Tunisie" formControlName="madeIn" >Tunisie
+            </label>
+            <label>
+                <input class="form-check-input" type="radio" name="madeIn" value="Autre" formControlName="madeIn" >Autre
+            </label>
+        </div>
+        <div>
+            <label>Catégorie</label>
+            <select class="form-select" name="selCategories" formControlName="category">
+                @for (c of categories; track $index) {
+                    <option [value]="c">{{c}}</option>
+                }
+            </select>
+        </div>
+        <div>
+            <label>
+                <input class="form-check-input" type="checkbox" name="isNew" formControlName="isNew" > Nouveau
+            </label>
+        </div>
+        <h5>points de vente</h5>
+        <div formArrayName="shops">
+            @for (shop of gameShops.controls; track $index) {
+                <div>
+                    <label>Nom du point de vente {{$index+1}}</label>
+                    <input class="form-control" type="text" [formControlName]="$index">
+                </div>
+                @if(shop.invalid && shop.touched){
+                    <div class="alert alert-danger">
+                        <p class="text-danger">Le nom du point de vente doit contenir au moins 2 caracteres</p>
+                    </div>
+                }
+            }
+        </div>
+        <input class="btn btn-primary" type="submit"  value="Ajouter" [disabled]="gameForm.invalid">
+        <input class="btn btn-danger" type="button" (click)="onresetform()" value="Effacer">
+        <button class="btn btn-primary" type="button" (click)="addShop()">Ajouter un point de vente</button>
+
+    </form>
+
+    {{games | json}}
+</div>
